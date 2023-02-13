@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Brand_Name": {
+      "type": "string"
+    },
+    "Product_Name": {
+      "type": "string"
+    },
+    "Root_Category": {
+      "type": "string"
+    },
+    "Child_Category": {
+      "type": "string"
+    },
+    "Grandchild_Category": {
+      "type": "string"
+    },
+    "Product_Description": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Sale_Price": {
+      "type": "decimal"
+    },
+    "Current_Stock_Level": {
+      "type": "integer"
+    },
+    "Thumbnail": {
+      "type": "string"
+    },
+    "Product_Image_File_1": {
+      "type": "string"
+    },
+    "Product_Image_File_2": {
+      "type": "string"
+    },
+    "Product_Image_File_3": {
+      "type": "string"
+    },
+    "Product_Image_File_4": {
+      "type": "string"
+    },
+    "Product_Image_File_5": {
+      "type": "string"
+    },
+    "Product_Image_File_6": {
+      "type": "string"
+    },
+    "Product_Image_File_7": {
+      "type": "string"
+    },
+    "Product_Image_File_8": {
+      "type": "string"
+    },
+    "Product_Image_File_9": {
+      "type": "string"
+    },
+    "Product_Image_File_10": {
+      "type": "string"
+    },
+    "root_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "subcategories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subcategory.subcategory",
+      "inversedBy": "products"
+    },
+    "Product_Image_File_11": {
+      "type": "string"
+    }
+  }
+}

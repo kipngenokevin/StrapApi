@@ -18,8 +18,9 @@
     "Product_Name": {
       "type": "string"
     },
-    "Root_Category": {
-      "type": "string"
+    "RootCategory": {
+      "type": "string",
+      "default": "root"
     },
     "Child_Category": {
       "type": "string"
@@ -72,12 +73,6 @@
     "Product_Image_File_10": {
       "type": "string"
     },
-    "root_category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
     "subcategories": {
       "type": "relation",
       "relation": "manyToMany",
@@ -86,6 +81,20 @@
     },
     "Product_Image_File_11": {
       "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "featured",
+        "trending"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "products"
     }
   }
 }
